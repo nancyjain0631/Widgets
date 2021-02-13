@@ -6,7 +6,7 @@ const Accordion = ({items}) =>{
         setActiveIndex(index);
     };
     const renderedItems=items.map((item,index)=>{
-        const active= index===active?'active':'';
+        const active= index===activeIndex ?'active':'';
         return <React.Fragment key={item.title}>
             <div className={`title ${active}`}
             onClick={ () => onTitleClick(index) }>
@@ -20,7 +20,7 @@ const Accordion = ({items}) =>{
         </React.Fragment>
     });
     return <div className="ui styled accordion">{renderedItems}
-    <h1>{activeIndex}</h1>
+    
     </div>;
 };
 export default Accordion;

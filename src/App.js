@@ -31,13 +31,14 @@ const options= [
     }
 
 ];
-export default () =>(
+export default () =>{
     const [selected, setSelected] =useState(options[0]);
-    <div>
-        
-        <Dropdown selected={selected}
-                  onSelectedChange={setSelected}
-                  options={options}
-        />
-    </div>
-);
+    return(
+        <div>
+            <Dropdown selected={selected}
+                      onSelectedChange={setSelected}
+                      options={options}
+            />
+        </div>
+    );
+};
